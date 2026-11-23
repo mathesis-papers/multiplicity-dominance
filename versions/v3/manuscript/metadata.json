@@ -1,0 +1,46 @@
+{
+  "id": "multiplicity-dominance",
+  "revision": 3,
+  "problem_ids": ["multiplicity-dominance"],
+  "topic": "Petrov–Scott, arXiv:2412.21126v2, Section 8.5, Conjecture 8.22 and Problem 8.23: multiplicity, exact support, moments and dominance",
+  "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For Petrov and Scott, Random Fibonacci words via clone Schur functions, arXiv:2412.21126v2, Section 8.5, Conjecture 8.22 and Problem 8.23, we apply and give an alternative proof of Flajolet's (1980, Proposition 3B) coefficient formula to obtain exact multiplicities, support and dominance. The formula is N(kappa) = product_i binomial(kappa_i+kappa_{i+1}-1, kappa_{i+1}). The printed odd-length splitting omits its final odd part; a weight-preserving correction gives exact support, explicit inverse compositions, prefix dominance, equal hike and upper triangularity. The smaller literal fixed-weight matrix satisfies the same dominance conclusion. Further proved corollaries give explicit moment coefficients, canonical lifts, both one-alphabet specialization counts, positive diagonal entries, invertibility, and binomial support counts by hike. The unasserted converse fails at (221,212).",
+  "summary": "Exact support and source-specific consequences of Flajolet's classical coefficient formula, distinguishing the literal and weight-preserving Petrov–Scott matrices.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean",
+  "posing_sources": [
+    {"url": "https://arxiv.org/abs/2412.21126v2", "locators": ["Definition 8.12", "Definition 8.16", "Definition 8.21", "Conjecture 8.22", "Problem 8.23", "Figure 8"]},
+    {"url": "https://doi.org/10.1017/fms.2025.10165", "journal": "Forum of Mathematics, Sigma", "volume": "14", "year": 2026, "article": "e15", "pdf_updated": "2026-02-05"},
+    {"url": "https://doi.org/10.1017/fms.2026.10186", "journal": "Forum of Mathematics, Sigma", "volume": "14", "year": 2026, "article": "e46", "published_online": "2026-03-27", "scope": "Notation-rendering correction; the updated original retains the odd-length splitting bound"}
+  ],
+  "coverage": [
+    {"source_item": "Problem 8.23, composition multiplicities", "outcome": "Answered: yes; Reproved; prior coefficient formula Flajolet (1980)", "scope": "All positive compositions; Proposition 3B, p. 132", "verification": "Written bijective proof; finite partition and Dyck-path checks"},
+    {"source_item": "Problem 8.23, matrix entries and zeros", "outcome": "Answered: yes", "scope": "Exact support and unique inverse for the weight-preserving matrix, with the literal variant specified", "verification": "Written proof; finite word-pair checks"},
+    {"source_item": "Conjecture 8.22", "outcome": "Proved", "scope": "Literal fixed-weight matrix and weight-preserving matrix", "verification": "Written proofs; pinned Lean declaration states the literal fixed-weight conclusion"},
+    {"source_item": "Definition 8.12, odd length at least five", "outcome": "Refuted-and-corrected: the asserted weight of B", "scope": "The first B coordinate requires its final odd part to preserve weight", "verification": "Exact weight identity and explicit five-part example"},
+    {"source_item": "Lemma 8.14", "outcome": "Reproved; prior proof Petrov–Scott (2025)", "scope": "Injective corrected splitting; both projections are surjective", "verification": "Written inverse and diagonal construction"},
+    {"source_item": "Lemma 8.17, Proposition 8.18, Remark 8.19", "outcome": "Reproved; prior results Petrov–Scott (2025)", "scope": "Partition statistics, surjectivity and an alternative canonical lift", "verification": "Written tree construction; 65,535 finite canonical lifts through weight 16"},
+    {"source_item": "Corollary 8.20", "outcome": "Reproved with explicit coefficients; prior expansion Petrov–Scott (2025), coefficient formula Flajolet (1980)", "scope": "Moment polynomial for indeterminates; the source's totally positive specialization gives the Stieltjes moment", "verification": "Written proof; direct partition-statistic coefficient checks through weight 9"},
+    {"source_item": "Section 8.5, opening specialization observation", "outcome": "Reproved; prior observation Petrov–Scott (2025)", "scope": "Both one-alphabet specializations have exactly as many distinct positive monomials as Fibonacci words of that weight", "verification": "Written proof; finite checks through weight 9"},
+    {"source_item": "Hike-block support, positive diagonal and invertibility", "outcome": "Not posed; proved", "scope": "Corrected hike-p support count binomial(n,2p); literal support count 2^(n-2)+1+binomial(n-1,2) for n>=2; positive diagonal and rational invertibility for both matrices", "verification": "Written proofs; finite support and diagonal checks through weight 12"},
+    {"source_item": "Converse of Conjecture 8.22", "outcome": "Not asserted in the source; fails for (u,v)=(221,212)", "scope": "Equal hike and prefix dominance do not suffice for nonzero entries", "verification": "Explicit zero-entry calculation"},
+    {"source_item": "Other questions listed in Section 18", "outcome": "Not covered", "scope": "Problems 4.10, 7.4, 7.5, 10.5; Conjecture 6.3; promotion, truncation and involution directions"}
+  ],
+  "lean_coverage": {
+    "declaration": "D5.S3.Combinatorics.YoungFibonacci.PetrovScottMultiplicityDominance.result",
+    "source_commit": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+    "statement": "For positive n and two Fibonacci words of weight n, the literal fixed-weight matrix is upper triangular; nonzero entries imply prefix dominance and equal hike.",
+    "source_url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean",
+    "written_proof_scope": "The product formula, weight-preserving correction, corrected-matrix theorem, exact support and sibling corollaries are proved in note.tex.",
+    "dependency": {"declaration": "D5.S1.Words.UnaryGapWords.gap", "scope": "Concatenates prescribed runs of a unary letter with a separator list; used for reverse-word comparison", "source_url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S1/Words/UnaryGapWords.lean"}
+  },
+  "coefficient_formula_reference": {"authors": "Philippe Flajolet", "year": 1980, "title": "Combinatorial aspects of continued fractions", "doi": "10.1016/0012-365X(80)90050-3", "locator": "Proposition 3B, p. 132; Proposition 10(i), pp. 150–151", "earlier_attribution": "Flajolet, Proposition 10(i), footnote 2, attributes an independent derivation to the earlier work of R. C. Read (1979), DOI 10.1111/j.1749-6632.1979.tb32822.x; attribution to Read is made through Flajolet"},
+  "later_profile_proofs": [
+    {"authors": "Darij Grinberg", "date": "2015-02-20", "url": "https://mathoverflow.net/a/198057", "scope": "Inductive excursion-insertion proof for Dyck height profiles"},
+    {"authors": "Ira Gessel", "date": "2015-02-20", "url": "https://mathoverflow.net/a/198059", "scope": "Identifies the profile product with Flajolet's Proposition 3B"}
+  ]
+}

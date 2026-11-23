@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 99977,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "ee0168c20d135bd9f53b67daa10fce338815bd5188bf68e041dc08020b9bcac4",
+      "sha256": "ee0168c20d135bd9f53b67daa10fce338815bd5188bf68e041dc08020b9bcac4"
+    },
+    "source": {
+      "bytes": 116353,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "5fb7ed3d9144bfaf555d5332094869f22600aa1f5493fd7aabf78a87ba59e8e2",
+      "sha256": "5fb7ed3d9144bfaf555d5332094869f22600aa1f5493fd7aabf78a87ba59e8e2"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "For Petrov and Scott, Random Fibonacci words via clone Schur functions, arXiv:2412.21126v2, Section 8.5, Conjecture 8.22 and Problem 8.23, we apply and give an alternative proof of Flajolet's (1980, Proposition 3B) coefficient formula to obtain exact multiplicities, support and dominance. The formula is N(kappa) = product_i binomial(kappa_i+kappa_{i+1}-1, kappa_{i+1}). The printed odd-length splitting omits its final odd part; a weight-preserving correction gives exact support, explicit inverse compositions, prefix dominance, equal hike and upper triangularity. The smaller literal fixed-weight matrix satisfies the same dominance conclusion. Further proved corollaries give explicit moment coefficients, canonical lifts, both one-alphabet specialization counts, positive diagonal entries, invertibility, and binomial support counts by hike. The unasserted converse fails at (221,212).",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 99977,
+      "sha256": "ee0168c20d135bd9f53b67daa10fce338815bd5188bf68e041dc08020b9bcac4",
+      "url": "/api/v1/collected-papers/multiplicity-dominance/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-22T23:03:46.226127059Z",
+    "record": "multiplicity-dominance",
+    "repository_name": "multiplicity-dominance",
+    "source": {
+      "bytes": 116353,
+      "sha256": "5fb7ed3d9144bfaf555d5332094869f22600aa1f5493fd7aabf78a87ba59e8e2",
+      "url": "/api/v1/collected-papers/multiplicity-dominance/files/source?version=3"
+    },
+    "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-22T23:03:46.226127059Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "multiplicity-dominance"
+  }
+}

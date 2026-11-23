@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-22"
+version: "3"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/multiplicity-dominance?version=3"
+license: "CC-BY-4.0"

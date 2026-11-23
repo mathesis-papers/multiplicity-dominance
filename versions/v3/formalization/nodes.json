@@ -1,0 +1,434 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s1",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "For every $\\kappa\\in\\Comp(n)$,\n\\[\n N(\\kappa)=\\prod_{i=1}^{m-1}\n       \\binom{\\kappa_i+\\kappa_{i+1}-1}{\\kappa_{i+1}}.\n \\tag{2}\n\\]\nThe empty product is one. In particular every composition has positive\nmultiplicity.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s10",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s10",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s10",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "The converse of Conjecture~8.22 is not asserted in the source and fails:\n$u=221$ dominates $v=212$ and both have hike two, but\n$N^*_{221,212}=N_{221,212}=0$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s2",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s2",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "If $N^*_{u,v}\\ne0$, then $\\hik(u)=\\hik(v)$ and $u\\succeq v$.\nThe matrix $N^*_n$ is upper triangular when its rows and columns are\nlisted in descending lexicographic order.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s3",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "The same dominance, hike and triangularity assertions hold for the\nliteral fixed-weight matrix obtained by using the printed $B$ and\nrequiring both indices to have weight $n$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s4",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s4",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "Let $u,v$ have weight $n\\ge1$. If their hikes differ, $N^*_{u,v}=0$.\nIf their common hike is zero, $u=v=1^n$ and $N^*_{u,v}=1$.\nFor common hike $p\\ge1$, write $a=\\sigma(u)$ and $b=\\sigma(v)$.\nThen\n\\[\n N^*_{u,v}>0\\quad\\Longleftrightarrow\\quad\n a_i\\ge b_i\\quad(2\\le i\\le p+1).\n \\tag{9}\n\\]\nFor a supported pair its unique composition is\n\\begin{align}\n \\kappa_1&=a_1,\\notag\\\\\n \\kappa_{2j}&=b_{j+1}-1,\\qquad\n \\kappa_{2j+1}=a_{j+1}-b_{j+1}+1\\quad(1\\le j<p),\\notag\\\\\n \\kappa_{2p}&=b_{p+1},\n \\tag{10}\n\\end{align}\nfollowed by $\\kappa_{2p+1}=a_{p+1}-b_{p+1}$ exactly when this\ndifference is positive. Its entry is given by (2).",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s5",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "The corrected matrix has $2^{n-1}$ nonzero entries, and\n\\[\n \\sum_{\\kappa\\in\\Comp(n)}N(\\kappa)\n =\\sum_{u,v}N^*_{u,v}=\\frac1{n+1}\\binom{2n}{n}.\n \\tag{11}\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s6",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "For $z(\\pi)=\\kappa$ one has\n$\\ell(\\pi)=A(\\kappa)$ and\n$g(\\pi)=(\\kappa_2,\\kappa_4,\\ldots,\\kappa_{2p})\n=\\operatorname{dep}(B^*(\\kappa))$.\nThe map $z:\\NC(n)\\to\\Comp(n)$ is surjective and has an explicit\nsection: at every depth, give all vertices of the next depth to the\nfirst vertex of the current depth, then apply the contour and paired-step\ninverse from the proof of Theorem~\\ref{thm:product}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s7",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "Define $M_n=\\sum_{\\pi\\in\\NC(n)}\n\\prod_{j\\ge0}c_{j+1}^{\\ell_j(\\pi)}\n\\prod_{j\\ge1}t_j^{g_j(\\pi)}$ for commuting indeterminates $c_j,t_j$.\nThen\n\\[\n M_n=\\sum_{\\kappa\\in\\Comp(n)}\n \\left(\\prod_{i=1}^{m-1}\n \\binom{\\kappa_i+\\kappa_{i+1}-1}{\\kappa_{i+1}}\\right)\n c_1^{\\kappa_1}\\prod_{j=1}^{p}\n c_{j+1}^{\\kappa_{2j}+\\kappa_{2j+1}}t_j^{\\kappa_{2j}}.\n \\tag{12}\n\\]\nUnder the totally positive specialization of~\\cite[Proposition~8.8,\nCorollary~8.20]{PS}, $M_n$ is its $n$th Stieltjes moment.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s8",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "Every diagonal entry of both matrices is positive. Their rows and columns\nare nonempty, and the matrices are invertible over $\\mathbb Q$.\nThey have zero entries between distinct hikes. For $p\\ge1$, the corrected\nhike-$p$ block has exactly $\\binom n{2p}$ nonzero entries, with\n$\\binom nr=0$ for $r>n$. The hike-zero block has one entry.\nFor $n\\ge2$ the literal matrix has $2^{n-2}+1+\\binom{n-1}{2}$\nnonzero entries; at $n=1$ it has one.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:multiplicity-dominance:3:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
+      },
+      "lineage": "collected:multiplicity-dominance:s9",
+      "macros": {
+        "\\Comp": "\\operatorname{Comp}",
+        "\\Fib": "\\operatorname{Fib}",
+        "\\NC": "\\operatorname{NC}",
+        "\\hik": "\\operatorname{h}",
+        "\\wt": "\\operatorname{wt}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "multiplicity-dominance",
+      "scope": "in_scope",
+      "statement": "Setting all $c_j=1$, or setting all $t_j=1$, in (12) leaves exactly\n$\\#\\mathrm{YF}_n$ distinct monomials, each with positive integer\ncoefficient, as observed in~\\cite[\\S8.5, opening paragraph]{PS}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
+      "toolchain": null,
+      "version": 3,
+      "work": "multiplicity-dominance"
+    }
+  ]
+}

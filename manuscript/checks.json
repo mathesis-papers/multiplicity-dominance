@@ -1,0 +1,223 @@
+{
+  "arithmetic": "exact integers",
+  "canonical_lifts_checked": 65535,
+  "checker_sha256": "ac6d12e2a5b0265c23404ffab3c88b485ae7e5f5b76a2469924e260c95c33e45",
+  "claims": [
+    "multiplicity product formula",
+    "exact corrected support criterion",
+    "inverse composition reconstruction",
+    "prefix dominance and equal hike",
+    "descending-lex upper triangularity",
+    "Catalan sum",
+    "literal odd-length weight deficit",
+    "exact literal support criterion",
+    "statistics and moment polynomial coefficients",
+    "two one-alphabet specialization counts",
+    "canonical lift",
+    "positive diagonal entries",
+    "hike-block support counts",
+    "literal support count",
+    "non-asserted converse counterexample"
+  ],
+  "composition_max_n": 16,
+  "compositions_examined": 65535,
+  "converse_example": {
+    "dominance": true,
+    "entry": 0,
+    "equal_hike": 2,
+    "source_status": "not asserted in the source",
+    "u": "221",
+    "v": "212"
+  },
+  "dyck_profile_max_n": 9,
+  "figure_8_n5": "all 64 entries agree",
+  "moment_polynomial_max_n": 9,
+  "ordered_word_pairs_examined": 87840,
+  "partition_counts": [
+    {
+      "n": 1,
+      "noncrossing_partitions": 1,
+      "positive_compositions": 1
+    },
+    {
+      "n": 2,
+      "noncrossing_partitions": 2,
+      "positive_compositions": 2
+    },
+    {
+      "n": 3,
+      "noncrossing_partitions": 5,
+      "positive_compositions": 4
+    },
+    {
+      "n": 4,
+      "noncrossing_partitions": 14,
+      "positive_compositions": 8
+    },
+    {
+      "n": 5,
+      "noncrossing_partitions": 42,
+      "positive_compositions": 16
+    },
+    {
+      "n": 6,
+      "noncrossing_partitions": 132,
+      "positive_compositions": 32
+    },
+    {
+      "n": 7,
+      "noncrossing_partitions": 429,
+      "positive_compositions": 64
+    },
+    {
+      "n": 8,
+      "noncrossing_partitions": 1430,
+      "positive_compositions": 128
+    },
+    {
+      "n": 9,
+      "noncrossing_partitions": 4862,
+      "positive_compositions": 256
+    }
+  ],
+  "partition_definition": "consecutive-block arcs, active predecessor ranks, Definition 8.16",
+  "partition_max_n": 9,
+  "scope": "finite checks complement the all-n written proofs in note.tex",
+  "set_partitions_examined": 26442,
+  "status": "pass",
+  "support_counts": [
+    {
+      "corrected_by_hike": {
+        "0": 1
+      },
+      "corrected_nonzero_entries": 1,
+      "literal_fixed_weight_nonzero_entries": 1,
+      "n": 1
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 1
+      },
+      "corrected_nonzero_entries": 2,
+      "literal_fixed_weight_nonzero_entries": 2,
+      "n": 2
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 3
+      },
+      "corrected_nonzero_entries": 4,
+      "literal_fixed_weight_nonzero_entries": 4,
+      "n": 3
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 6,
+        "2": 1
+      },
+      "corrected_nonzero_entries": 8,
+      "literal_fixed_weight_nonzero_entries": 8,
+      "n": 4
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 10,
+        "2": 5
+      },
+      "corrected_nonzero_entries": 16,
+      "literal_fixed_weight_nonzero_entries": 15,
+      "n": 5
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 15,
+        "2": 15,
+        "3": 1
+      },
+      "corrected_nonzero_entries": 32,
+      "literal_fixed_weight_nonzero_entries": 27,
+      "n": 6
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 21,
+        "2": 35,
+        "3": 7
+      },
+      "corrected_nonzero_entries": 64,
+      "literal_fixed_weight_nonzero_entries": 48,
+      "n": 7
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 28,
+        "2": 70,
+        "3": 28,
+        "4": 1
+      },
+      "corrected_nonzero_entries": 128,
+      "literal_fixed_weight_nonzero_entries": 86,
+      "n": 8
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 36,
+        "2": 126,
+        "3": 84,
+        "4": 9
+      },
+      "corrected_nonzero_entries": 256,
+      "literal_fixed_weight_nonzero_entries": 157,
+      "n": 9
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 45,
+        "2": 210,
+        "3": 210,
+        "4": 45,
+        "5": 1
+      },
+      "corrected_nonzero_entries": 512,
+      "literal_fixed_weight_nonzero_entries": 293,
+      "n": 10
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 55,
+        "2": 330,
+        "3": 462,
+        "4": 165,
+        "5": 11
+      },
+      "corrected_nonzero_entries": 1024,
+      "literal_fixed_weight_nonzero_entries": 558,
+      "n": 11
+    },
+    {
+      "corrected_by_hike": {
+        "0": 1,
+        "1": 66,
+        "2": 495,
+        "3": 924,
+        "4": 495,
+        "5": 66,
+        "6": 1
+      },
+      "corrected_nonzero_entries": 2048,
+      "literal_fixed_weight_nonzero_entries": 1080,
+      "n": 12
+    }
+  ],
+  "support_max_n": 12
+}

@@ -1,0 +1,473 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Fib}{\operatorname{Fib}}
+\newcommand{\NC}{\operatorname{NC}}
+\newcommand{\Comp}{\operatorname{Comp}}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\hik}{\operatorname{h}}
+\title{Exact support for Petrov--Scott, \S8.5,\\
+Conjecture 8.22 and Problem 8.23:\\
+an application and alternative proof of Flajolet (1980)}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{8 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Petrov and Scott's \emph{Random Fibonacci words via clone Schur
+functions} (arXiv:\allowbreak2412.21126v2), \S8.5, Conjecture~8.22 and
+Problem~8.23, we apply and give an alternative proof of Flajolet's
+(1980, Proposition~3B) coefficient formula to obtain exact multiplicities,
+support and dominance, with the weight-preserving splitting specified
+below. For a positive composition $\kappa=(\kappa_1,\ldots,\kappa_m)$,
+the multiplicity is
+\[
+N(\kappa)=\prod_{i=1}^{m-1}\binom{\kappa_i+\kappa_{i+1}-1}{\kappa_{i+1}}.
+\]
+A Dyck-path bijection gives a self-contained proof. We characterize all
+nonzero matrix entries, recover their compositions explicitly, and prove
+prefix dominance, equal hike and upper triangularity. The printed
+odd-length splitting omits its final odd part; adding that part restores
+weight and reproduces the source's Figure~8. The literal fixed-weight
+matrix also satisfies the conjectured inequalities, with a smaller support.
+Further corollaries give explicit moment coefficients, canonical lifts,
+positive diagonal entries and support counts at each hike.
+\end{abstract}
+\noindent\textbf{License.} Creative Commons Attribution 4.0 International
+(CC BY 4.0).
+
+\section{The composition multiplicity}
+The posing source~\cite[\S8.5, pp.~46--47]{PS} conjectures upper
+triangularity, prefix dominance and equal hike for its multiplicity matrix
+(Conjecture~8.22), and asks for composition multiplicities, individual
+matrix entries and exact vanishing conditions (Problem~8.23).
+The printed statement begins ``The matrix $N_n$ is upper triangular.''
+Theorem~\ref{thm:product} identifies its classical enumerative ingredient;
+Theorem~\ref{thm:support} supplies the source-specific inverse and support.
+
+Write $\Comp(n)$ for the positive compositions of $n$ and $\NC(n)$ for
+the noncrossing set partitions of $\{1,\ldots,n\}$. Draw an arc between
+successive elements of each block. Immediately before vertex $i$, an
+arc $(a,b)$ is active when $a<i\le b$. Let $H_i$ be the number of active
+arcs. The statistics in Petrov--Scott~\cite[\S8.1, (8.1)]{PS} are
+\[
+ \ell_j=\#\{i:H_i=j\},\qquad
+ g_j=\#\{i:i\text{ has a predecessor of rank }j
+                 \text{ among active left endpoints}\}.
+\]
+Ranks start at one, in increasing order of the left endpoints.
+For a noncrossing partition, a vertex with a predecessor closes or
+continues the innermost active block. Its predecessor has rank $H_i$.
+With $p=\max_i H_i$, Definition~8.16 of~\cite{PS} therefore gives
+\[
+ z(\pi)=(\ell_0,g_1,\ell_1-g_1,\ldots,g_p,\ell_p-g_p),
+ \tag{1}
+\]
+with the last coordinate deleted precisely when it is zero. For $p=0$
+this means $z(\pi)=(n)$. Define
+$N(\kappa)=\#\{\pi\in\NC(n):z(\pi)=\kappa\}$, as in
+Corollary~8.20 and Problem~8.23 of~\cite{PS}.
+
+\begin{theorem}\label{thm:product}
+For every $\kappa\in\Comp(n)$,
+\[
+ N(\kappa)=\prod_{i=1}^{m-1}
+       \binom{\kappa_i+\kappa_{i+1}-1}{\kappa_{i+1}}.
+ \tag{2}
+\]
+The empty product is one. In particular every composition has positive
+multiplicity.
+\end{theorem}
+\begin{proof}
+Process the vertices in order, retaining a stack of open blocks.
+A first but not last block element opens a block; a last but not first
+element closes the top block; an interior block element extends the top
+block; and a singleton starts and finishes its own block.
+Noncrossing is exactly what makes the stack rule applicable. These four
+possibilities give an up-step, a down-step, a transient horizontal step,
+and a singleton horizontal step, respectively. Transients are forbidden
+at height zero. Conversely these steps reconstruct a unique partition:
+an up-step pushes a new block, a down-step appends its vertex and pops,
+a transient appends its vertex to the top block without popping, and a
+singleton creates a one-element block. The stack guarantees noncrossing.
+
+Replace the four step types, respectively, by
+\[
+ UU,\qquad DD,\qquad DU,\qquad UD.
+ \tag{3}
+\]
+This produces a Dyck path of semilength $n$. Every Dyck path has a unique
+inverse by grouping consecutive steps in pairs; a $DU$ pair at even
+height zero is impossible. Thus (3) is a bijection.
+
+Let $U_j,D_j,S_j,T_j$ count the original up-, down-, singleton and
+transient steps starting at height $j$. Then
+\[
+ \ell_j=U_j+D_j+S_j+T_j,\quad g_j=D_j+T_j,\quad
+ U_{j-1}=D_j,
+ \tag{4}
+\]
+with $D_0=T_0=0$. In the doubled path, up-steps ending at height $2j+1$
+number $U_j+S_j=\ell_j-g_j$; up-steps ending at height $2j$ number
+$U_{j-1}+T_j=g_j$. At height one the count is $U_0+S_0=\ell_0$.
+Consequently the numbers of up-steps ending at successive positive
+heights are exactly the coordinates of (1).
+
+Under the contour bijection between Dyck paths and rooted ordered
+trees, these up-steps create the vertices at successive depths.
+There are $\kappa_i$ ordered vertices at depth $i$. Distributing the
+$\kappa_{i+1}$ ordered children among them is a weak composition into
+$\kappa_i$ slots, giving
+$\binom{\kappa_i+\kappa_{i+1}-1}{\kappa_{i+1}}$ choices.
+The root has its $\kappa_1$ children in one way, the last generation has
+no children, and choices at intermediate depths are independent.
+Their product proves (2). This is the tree-profile interpretation of
+Flajolet's Stieltjes--Rogers coefficient formula~\cite[p.~132,
+Proposition~3B; pp.~150--151, Proposition~10(i)]{F}.
+Flajolet's Proposition~10(i), footnote~2, attributes an independent
+derivation to the earlier work of R.~C.~Read (1979)~\cite{Read}.
+This attribution to Read is made through Flajolet.
+The same profile product was stated again in a 2015 MathOverflow
+question; Grinberg supplied an excursion-insertion proof, and Gessel
+identified Flajolet's Proposition~3B as its source~\cite{MO}.
+\end{proof}
+
+\section{Weight-preserving splitting and dominance}
+A Fibonacci word is a word over $\{1,2\}$; its weight is the sum of its
+letters and its hike $\hik$ is its number of twos. For a word with
+$p\ge1$ twos, write
+$w=1^{r_0}2\,1^{r_1}2\cdots2\,1^{r_p}$ and put
+\[
+ \sigma(w)=(r_0+1,r_1+2,\ldots,r_{p-1}+2,r_p+1).
+ \tag{5}
+\]
+For $w=1^n$, put $\sigma(w)=(n)$. These are precisely the positive
+compositions with interior coordinates at least two. Their inverse is
+denoted $\Fib$. Both maps preserve weight.
+
+For $m\ge2$, set $p=\lfloor m/2\rfloor$ and, when $m=2p$, put
+$\kappa_{2p+1}=0$. Define
+\begin{align}
+ A(\kappa)&=(\kappa_1,\kappa_2+\kappa_3,
+             \ldots,\kappa_{2p-2}+\kappa_{2p-1},
+             \kappa_{2p}+\kappa_{2p+1}),\notag\\
+ B^*(\kappa)&=\left(1-p+\sum_{j=0}^{p}\kappa_{2j+1},
+                    1+\kappa_2,\ldots,1+\kappa_{2p-2},\kappa_{2p}\right).
+ \tag{6}
+\end{align}
+For $p=1$ the displayed intermediate lists are empty. For $m=1$ set
+$A(\kappa)=B^*(\kappa)=\kappa$.
+
+For $m\le3$ and for even $m$, (6) agrees with Definition~8.12
+of~\cite{PS}. For odd $m=2p+1\ge5$, the printed first coordinate of
+$B$ sums the first $p$ odd parts rather than all $p+1$ of them.
+That definition calls $A,B$ ``two auxiliary Fibonacci compositions of
+$n$''; its claimed weight for $B$ fails in these odd lengths.
+It follows by addition that
+\[
+ \sum B(\kappa)=n-\kappa_{2p+1},\qquad
+ \sum B^*(\kappa)=n.
+ \tag{7}
+\]
+Thus (6) adds $\kappa_{2p+1}$ to that first coordinate. Both the
+14 August 2025 preprint and the journal PDF updated on 5 February 2026
+retain the former bound. The associated published
+corrigendum~\cite{PScorr} concerns notation rendering and does not
+supply another splitting formula. For instance $\kappa=(1,1,1,1,1)$ gives
+$A=(1,2,2)$, $B=(1,2,1)$ and $B^*=(2,2,1)$, corresponding to
+$u=221$, literal $v=22$ and corrected $v=122$. Formula (2) gives
+multiplicity one, matching the $(221,122)$ entry of Figure~8.
+
+For two words of weight $n$ define $N^*_{u,v}=N(\kappa)$ when
+$(u,v)=(\Fib(A(\kappa)),\Fib(B^*(\kappa)))$ for a composition
+$\kappa\in\Comp(n)$, and zero otherwise. The uniqueness needed for
+this definition follows in Theorem~\ref{thm:support}.
+Write $u\succeq v$ when the sum of the first $q$ letters of $u$ is at
+least the corresponding sum for $v$, for every common prefix length $q$.
+
+\begin{theorem}\label{thm:dominance}
+If $N^*_{u,v}\ne0$, then $\hik(u)=\hik(v)$ and $u\succeq v$.
+The matrix $N^*_n$ is upper triangular when its rows and columns are
+listed in descending lexicographic order.
+\end{theorem}
+\begin{proof}
+Let $a=A(\kappa)$ and $b=B^*(\kappa)$. For $m=1$ the words coincide.
+Otherwise $a,b$ have $p+1$ coordinates and weight $n$, so both words
+have hike $p$ and length $n-p$. Equation (6) gives
+\[
+ a_i-b_i=\kappa_{2i-1}-1\ge0\quad(2\le i\le p),\qquad
+ a_{p+1}-b_{p+1}=\kappa_{2p+1}\ge0.
+ \tag{8}
+\]
+Since their total sums agree, for $1\le j\le p$ we have
+$\sum_{i\le j}a_i\le\sum_{i\le j}b_i$.
+By (5) the position of the $j$th two in $\Fib(a)$ is
+$\sum_{i\le j}a_i-j+1$, so each two of $u$ occurs no later than the
+corresponding two of $v$. Every prefix of $u$ therefore contains at least
+as many twos as the corresponding prefix of $v$; adding the prefix
+length proves dominance. At the first differing letter, dominance
+forces $u$ to have 2 and $v$ to have 1. Thus $u$ precedes $v$ in the
+stated ordering, proving upper triangularity.
+\end{proof}
+
+\begin{corollary}\label{cor:literal}
+The same dominance, hike and triangularity assertions hold for the
+literal fixed-weight matrix obtained by using the printed $B$ and
+requiring both indices to have weight $n$.
+\end{corollary}
+\begin{proof}
+Equation (7) excludes exactly the odd compositions of length at least
+five. For every remaining composition, $B=B^*$, so the literal matrix
+has a subset of the support of $N^*_n$ with the same entries.
+\end{proof}
+
+\section{Exact support and individual entries}
+\begin{theorem}\label{thm:support}
+Let $u,v$ have weight $n\ge1$. If their hikes differ, $N^*_{u,v}=0$.
+If their common hike is zero, $u=v=1^n$ and $N^*_{u,v}=1$.
+For common hike $p\ge1$, write $a=\sigma(u)$ and $b=\sigma(v)$.
+Then
+\[
+ N^*_{u,v}>0\quad\Longleftrightarrow\quad
+ a_i\ge b_i\quad(2\le i\le p+1).
+ \tag{9}
+\]
+For a supported pair its unique composition is
+\begin{align}
+ \kappa_1&=a_1,\notag\\
+ \kappa_{2j}&=b_{j+1}-1,\qquad
+ \kappa_{2j+1}=a_{j+1}-b_{j+1}+1\quad(1\le j<p),\notag\\
+ \kappa_{2p}&=b_{p+1},
+ \tag{10}
+\end{align}
+followed by $\kappa_{2p+1}=a_{p+1}-b_{p+1}$ exactly when this
+difference is positive. Its entry is given by (2).
+\end{theorem}
+\begin{proof}
+Necessity is (8). Conversely (9) makes every part of (10) positive:
+$b_{j+1}\ge2$ for $j<p$, and the endpoints are positive. The optional
+last part is positive by its inclusion rule. Summing the parts gives
+$\sum_i a_i=n$. Substitution into (6) recovers all coordinates of
+$a$ and all coordinates of $b$ except possibly the first. Equality of
+total weights then recovers the first coordinate too. Formula (2)
+makes the resulting entry positive. Finally (6) forces every part in
+(10) and forces whether the last part is present, proving uniqueness.
+\end{proof}
+
+For the literal matrix, add to (9) the condition
+$a_{p+1}=b_{p+1}$ when $p\ge2$; when $p=1$ no additional condition
+is needed. This is an exact vanishing criterion for both interpretations
+of the matrix.
+
+\begin{corollary}
+The corrected matrix has $2^{n-1}$ nonzero entries, and
+\[
+ \sum_{\kappa\in\Comp(n)}N(\kappa)
+ =\sum_{u,v}N^*_{u,v}=\frac1{n+1}\binom{2n}{n}.
+ \tag{11}
+\]
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:support} gives an injective correspondence from the
+$2^{n-1}$ positive compositions to supported pairs, and
+Theorem~\ref{thm:product} gives positive coefficients.
+The Dyck paths in its proof are partitioned by their height profiles.
+There are $\binom{2n}{n}-\binom{2n}{n-1}=\binom{2n}{n}/(n+1)$
+Dyck paths, by reflecting a path up to its first step below zero.
+\end{proof}
+
+\section{Sibling consequences and sharper boundaries}
+In this section put $\kappa_{2p+1}=0$ when $m=2p$.
+For a Fibonacci composition $b$ of length $p+1$, write
+$\operatorname{dep}(b)=(b_2-1,\ldots,b_p-1,b_{p+1})$;
+for $p=0$ this is the empty list.
+
+\begin{corollary}[Statistics and a canonical lift]\label{cor:lift}
+For $z(\pi)=\kappa$ one has
+$\ell(\pi)=A(\kappa)$ and
+$g(\pi)=(\kappa_2,\kappa_4,\ldots,\kappa_{2p})
+=\operatorname{dep}(B^*(\kappa))$.
+The map $z:\NC(n)\to\Comp(n)$ is surjective and has an explicit
+section: at every depth, give all vertices of the next depth to the
+first vertex of the current depth, then apply the contour and paired-step
+inverse from the proof of Theorem~\ref{thm:product}.
+\end{corollary}
+\begin{proof}
+The statistics follow by substituting (1) into (6).
+For any positive composition, the prescribed rooted ordered tree exists:
+each nonfinal depth has at least one vertex. Its depth profile is
+$\kappa$, so its inverse partition has $z(\pi)=\kappa$.
+This reproves the statistics and surjectivity of~\cite[Lemma~8.17,
+Proposition~8.18]{PS} and gives another canonical lift alongside its
+Remark~8.19. Depletion ignores the first coordinate, so replacing $B$
+by $B^*$ does not change $g$ or the moment monomial.
+\end{proof}
+
+\begin{corollary}[Explicit moment coefficients]\label{cor:moments}
+Define $M_n=\sum_{\pi\in\NC(n)}
+\prod_{j\ge0}c_{j+1}^{\ell_j(\pi)}
+\prod_{j\ge1}t_j^{g_j(\pi)}$ for commuting indeterminates $c_j,t_j$.
+Then
+\[
+ M_n=\sum_{\kappa\in\Comp(n)}
+ \left(\prod_{i=1}^{m-1}
+ \binom{\kappa_i+\kappa_{i+1}-1}{\kappa_{i+1}}\right)
+ c_1^{\kappa_1}\prod_{j=1}^{p}
+ c_{j+1}^{\kappa_{2j}+\kappa_{2j+1}}t_j^{\kappa_{2j}}.
+ \tag{12}
+\]
+Under the totally positive specialization of~\cite[Proposition~8.8,
+Corollary~8.20]{PS}, $M_n$ is its $n$th Stieltjes moment.
+\end{corollary}
+\begin{proof}
+Group partitions by $z(\pi)$, use Corollary~\ref{cor:lift} for the
+exponents, and apply (2) to the size of each fiber. This makes the
+coefficients of the source's moment expansion explicit; their underlying
+Stieltjes--Rogers formula is Flajolet's~\cite[Proposition~3B]{F}.
+\end{proof}
+
+\begin{corollary}[Diagonal, hike blocks and support counts]\label{cor:counts}
+Every diagonal entry of both matrices is positive. Their rows and columns
+are nonempty, and the matrices are invertible over $\mathbb Q$.
+They have zero entries between distinct hikes. For $p\ge1$, the corrected
+hike-$p$ block has exactly $\binom n{2p}$ nonzero entries, with
+$\binom nr=0$ for $r>n$. The hike-zero block has one entry.
+For $n\ge2$ the literal matrix has $2^{n-2}+1+\binom{n-1}{2}$
+nonzero entries; at $n=1$ it has one.
+\end{corollary}
+\begin{proof}
+In (10), take $a=b=\sigma(w)$. This gives $\kappa=(n)$ if $p=0$,
+and otherwise an even-length composition with first part $a_1$,
+last part $a_{p+1}$, and intermediate pairs $(a_{j+1}-1,1)$ for
+$1\le j<p$. It splits to $(w,w)$ even for the printed $B$.
+Thus (2) gives positive diagonal entries, both projections of the
+splitting are surjective as in~\cite[Lemma~8.14]{PS}, and triangularity
+gives a nonzero determinant. Distinct hikes have zero entries by
+Theorem~\ref{thm:support}.
+
+Hike $p\ge1$ corresponds precisely to composition lengths $2p$ and
+$2p+1$. Their counts sum to
+$\binom{n-1}{2p-1}+\binom{n-1}{2p}=\binom n{2p}$.
+For the literal matrix only length one, length three and even lengths
+remain. For $n\ge2$, the even lengths contribute $2^{n-2}$ (pair subsets
+of the $n-1$ separator positions by toggling one fixed position),
+and lengths one and three contribute $1$ and $\binom{n-1}{2}$.
+\end{proof}
+
+\begin{corollary}[The two one-alphabet specializations]\label{cor:alphabets}
+Setting all $c_j=1$, or setting all $t_j=1$, in (12) leaves exactly
+$\#\mathrm{YF}_n$ distinct monomials, each with positive integer
+coefficient, as observed in~\cite[\S8.5, opening paragraph]{PS}.
+\end{corollary}
+\begin{proof}
+For $t_j=1$, the exponent list is $A(\kappa)=\sigma(u)$.
+For $c_j=1$, it is $\operatorname{dep}(\sigma(v))$, which determines
+$\sigma(v)$ at fixed weight by recovering its first coordinate.
+Every $u$ and every $v$ occurs by the diagonal construction in
+Corollary~\ref{cor:counts}; all coefficients in (12) are positive.
+\end{proof}
+
+\begin{corollary}[Dominance does not characterize support]\label{cor:converse}
+The converse of Conjecture~8.22 is not asserted in the source and fails:
+$u=221$ dominates $v=212$ and both have hike two, but
+$N^*_{221,212}=N_{221,212}=0$.
+\end{corollary}
+\begin{proof}
+The prefix sums are $(2,4,5)$ and $(2,3,5)$.
+The row compositions are $(1,2,2)$ and $(1,3,1)$, so (9) fails
+at their second coordinate. The literal support is smaller.
+\end{proof}
+
+\section{Coverage and verification scope}
+\begin{center}\small
+\begin{tabular}{@{}p{.22\textwidth}p{.7\textwidth}@{}}
+\toprule
+Source item in~\cite{PS} & Mathematical coverage\\
+\midrule
+Problem 8.23: $N(\kappa)$ & Answered: yes, by (2).
+Reproved; prior coefficient formula Flajolet (1980), Proposition 3B.\\
+Problem 8.23: entries and zeros & Answered: yes, by
+Theorem~\ref{thm:support}, (10), and the literal variant.\\
+Conjecture 8.22 & Proved: Theorem~\ref{thm:dominance} for (6),
+Corollary~\ref{cor:literal} for the literal fixed-weight matrix.\\
+Definition 8.12: weight claim & Refuted-and-corrected for odd $m\ge5$:
+the five-part example and (7) identify the deficit; (6) restores weight.\\
+Lemma 8.14 & Reproved; prior proof Petrov--Scott (2025).
+Theorem~\ref{thm:support} gives injectivity, Corollary~\ref{cor:counts}
+gives both surjections for the corrected map.\\
+Lemma 8.17; Proposition 8.18 & Reproved; prior proofs Petrov--Scott
+(2025). Corollary~\ref{cor:lift} gives the statistics and surjectivity.\\
+Remark 8.19 & Alternative canonical lift in Corollary~\ref{cor:lift};
+existence was already established by Petrov--Scott (2025).\\
+Corollary 8.20 & Reproved with explicit coefficients in (12);
+prior moment expansion Petrov--Scott (2025), coefficient formula
+Flajolet (1980).\\
+\S8.5, opening observation & Reproved; prior observation Petrov--Scott
+(2025). Corollary~\ref{cor:alphabets} counts both specialized alphabets.\\
+Figure 8 & Finite check: all 64 entries agree with (2), (6), (10).\\
+Converse; refined counts & Not posed; obstruction proved in
+Corollary~\ref{cor:converse}; counts and invertibility proved in
+Corollary~\ref{cor:counts}.\\
+Other questions in \S18 & Not covered: Problems 4.10, 7.4, 7.5, 10.5;
+Conjecture 6.3; promotion, truncations, and involution directions.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Lean declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean}{\texttt{PetrovScottMultiplicityDominance.}\allowbreak\texttt{result}}
+states the literal fixed-weight conclusion of
+Corollary~\ref{cor:literal}, using the printed $B$ and its defined
+noncrossing-partition multiplicity. Its hypotheses require both words to
+have the same positive weight; it does not state the corrected-matrix
+claim or the product formula. The declaration uses
+\href{https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S1/Words/UnaryGapWords.lean}{\texttt{UnaryGapWords.gap}}
+to concatenate runs of ones separated by twos in its reverse-word
+comparison. This is a word constructor, not a multiplicity theorem.
+The product formula, correction,
+corrected-matrix theorem and exact support are established by the
+written proofs above. The accompanying exact-integer checker independently
+enumerates set partitions and Dyck paths through $n=9$, word pairs
+through $n=12$, and compositions through $n=16$. It also checks the
+moment exponents, canonical lifts, diagonal entries and refined support
+counts, and the explicit converse counterexample. These finite checks
+complement, rather than replace, the all-$n$ proofs.
+
+\begin{thebibliography}{9}
+\small
+\bibitem{PS} L. Petrov and J. Scott,
+\emph{Random Fibonacci words via clone Schur functions},
+Forum of Mathematics, Sigma \textbf{14} (2026), e15, 1--90.
+\href{https://doi.org/10.1017/fms.2025.10165}{doi:10.1017/fms.2025.10165}.
+Posing locators: Definitions 8.12, 8.16 and 8.21, Conjecture 8.22,
+Problem 8.23; also
+\href{https://arxiv.org/abs/2412.21126v2}{arXiv:2412.21126v2}
+(14 August 2025), pp. 43--47.
+\bibitem{PScorr} L. Petrov and J. Scott,
+\emph{Random Fibonacci Words via Clone Schur Functions---Corrigendum},
+Forum of Mathematics, Sigma \textbf{14} (2026), e46, 1.
+\href{https://doi.org/10.1017/fms.2026.10186}{doi:10.1017/fms.2026.10186}
+(27 March 2026).
+\bibitem{F} P. Flajolet,
+\emph{Combinatorial aspects of continued fractions},
+Discrete Mathematics \textbf{32} (1980), 125--161,
+especially p. 132, Proposition 3B.
+\href{https://doi.org/10.1016/0012-365X(80)90050-3}{doi:10.1016/0012-365X(80)90050-3}.
+\bibitem{Read} R. C. Read,
+\emph{The chord intersection problem},
+Annals of the New York Academy of Sciences \textbf{319} (1979), 444--454.
+\href{https://doi.org/10.1111/j.1749-6632.1979.tb32822.x}{doi:10.1111/j.1749-6632.1979.tb32822.x}.
+Attribution via Flajolet~\cite[Proposition~10(i), footnote~2]{F}.
+\bibitem{MO} D. Grinberg and I. Gessel, answers to
+\emph{Number of Dyck paths with prescribed number of edges},
+MathOverflow, 20 February 2015.
+\href{https://mathoverflow.net/a/198057}{Grinberg's insertion proof};
+\href{https://mathoverflow.net/a/198059}{Gessel's reference to Flajolet}.
+\end{thebibliography}
+\end{document}
