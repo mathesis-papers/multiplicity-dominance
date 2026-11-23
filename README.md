@@ -5,13 +5,15 @@
 For Petrov and Scott, Random Fibonacci words via clone Schur functions, arXiv:2412.21126v2, Section 8.5, Conjecture 8.22 and Problem 8.23, we apply and give an alternative proof of Flajolet's (1980, Proposition 3B) coefficient formula to obtain exact multiplicities, support and dominance. The formula is N(kappa) = product_i binomial(kappa_i+kappa_{i+1}-1, kappa_{i+1}). The printed odd-length splitting omits its final odd part; a weight-preserving correction gives exact support, explicit inverse compositions, prefix dominance, equal hike and upper triangularity. The smaller literal fixed-weight matrix satisfies the same dominance conclusion. Further proved corollaries give explicit moment coefficients, canonical lifts, both one-alphabet specialization counts, positive diagonal entries, invertibility, and binomial support counts by hike. The unasserted converse fails at (221,212).
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24407822](https://doi.org/10.5281/zenodo.24407822)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24407821](https://doi.org/10.5281/zenodo.24407821)
 - License: CC-BY-4.0
 - Version: 3
 - Mathesis record: [multiplicity-dominance](https://mathesis-omega-research.apps.chrono-ai.fun/papers/multiplicity-dominance?version=3)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980). Mathesis, version 3. https://mathesis-omega-research.apps.chrono-ai.fun/papers/multiplicity-dominance?version=3
+Haobo Ma, Wenlin Zhang (2026). Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980). Mathesis, version 3. https://doi.org/10.5281/zenodo.24407822
 
 ## Statement progress
 

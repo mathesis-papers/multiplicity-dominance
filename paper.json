@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24407821",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24407822",
     "lean_source": {
       "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
       "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
