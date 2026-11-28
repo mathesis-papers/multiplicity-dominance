@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24407821",
     "current_version": 3,
     "doi": "10.5281/zenodo.24407822",
+    "kind": "note",
     "lean_source": {
       "revision": "e277c80d045570daf43bd03b4e313f7ce457b4e2",
       "url": "https://github.com/the-omega-institute/trureturing/blob/e277c80d045570daf43bd03b4e313f7ce457b4e2/D5/S3/Combinatorics/YoungFibonacci/PetrovScottMultiplicityDominance.lean"
@@ -55,10 +56,12 @@
     "title": "Exact support for Petrov–Scott, §8.5, Conjecture 8.22 and Problem 8.23: an application and alternative proof of Flajolet (1980)",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-22T23:03:46.226127059Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "multiplicity-dominance"
